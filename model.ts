@@ -62,7 +62,7 @@ function showAllProduct() {
 
 function findProductByName() {
     console.log('Nhập tên sản phẩm muốn tìm kiếm');
-    let productName = rl.question('Nhập tên sản phẩm đi ông cháu: ');
+    let productName = rl.question('Nhap san pham di ong chau: ');
     let findProductByName = storeManager.findByName(productName);
     console.table(findProductByName);
 }
@@ -70,13 +70,13 @@ function findProductByName() {
 function deleteProduct() {
     console.log('Xóa một mặt hàng');
 
-    let id = +rl.question('Mời nhập ID muốn xóa: ');
+    let id = +rl.question('Nhap ID muon xoa: ');
     storeManager.deleteProduct(id);
 }
 
 function updateProduct() {
     console.log('Chỉnh sửa sản phẩm');
-    let id = +rl.question('Mời nhập ID muốn chỉnh sửa sản phẩm: ');
+    let id = +rl.question('Moi nhap ID muon chinh sua: ');
     let product = dataProduct();
     storeManager.updateProduct(id, product);
 }
